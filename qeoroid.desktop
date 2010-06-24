@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name[]=QNetWalk
+Comment[]=Eoroid clone
+Exec=qeoroid
+Icon=qnetwalk/qnetwalk
