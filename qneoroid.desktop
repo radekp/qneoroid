@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name[]=QNeoroid
+Comment[]=Eoroid clone
+Exec=qneoroid
+Icon=qneoroid/qneoroid

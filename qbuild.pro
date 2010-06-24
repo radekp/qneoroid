@@ -1,10 +1,17 @@
-TARGET=qnoeroid
-CONFIG+=qtopia quicklaunch 
+TEMPLATE=app
+TARGET=qneoroid
+CONFIG+=qtopia
 
 # Input
-HEADERS=cell.h mainwindow.h
-SOURCES=cell.cpp main.cpp mainwindow.cpp
+HEADERS=cell.h\
+        mainwindow.h
+
+SOURCES=cell.cpp \
+        mainwindow.cpp \
+        main.cpp
+
 RESOURCES=pics/pics.qrc
+
 TRANSLATIONS+=translations/qnetwalk_de.ts \
                 translations/qnetwalk_es.ts \
                 translations/qnetwalk_fr.ts \
@@ -13,3 +20,38 @@ TRANSLATIONS+=translations/qnetwalk_de.ts \
                 translations/qnetwalk_pl.ts \
                 translations/qnetwalk_pt_BR.ts \
                 translations/qnetwalk_ru.ts
+
+DEFINES+=QTOPIA_PHONE
+
+pkg [
+    name=qneoroid
+    desc="qneoroid"
+    version=$$QTOPIA_VERSION
+    license=$$QTOPIA_LICENSE
+    maintainer=$$QTOPIA_MAINTAINER
+]
+
+target [
+    hint=sxe
+    domain=trusted
+]
+
+desktop [
+    hint=desktop
+    files=qneoroid.desktop
+    path=/apps/Games
+]
+
+pics [
+    hint=pics
+    files=pics/*
+    path=/pics/qneoroid
+]
+
+sounds [
+    hint=image
+    files=sounds/*
+    path=/sounds/qneoroid
+]
+
+
